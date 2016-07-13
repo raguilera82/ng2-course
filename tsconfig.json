@@ -29,6 +29,7 @@
     "buildOnSave": false,
     "files": [
         "./app/bootstrap.ts",
+        "./app/example/example.service.ts",
         "./app/helloworld/hello-world.component.ts",
         "./app/helloworld/hello-world.service.ts",
         "./app/main.ts",
