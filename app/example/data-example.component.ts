@@ -9,7 +9,7 @@ import {DataChildComponent} from './data-child.component'
              <button (click)="onClick()">Click</button>
              <input type="text" [(ngModel)]="twoway"/>
              <p>{{twoway}}</p>
-             <data-child [name]="name" (created)="onCreated($event)"></data-child>
+             <data-child [name]="twoway" (created)="onCreated($event)"></data-child>
              <p *ngIf="msg">{{msg}}</p>`,
   directives: [DataChildComponent],
   host: {
