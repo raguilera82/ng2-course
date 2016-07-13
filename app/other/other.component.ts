@@ -10,6 +10,7 @@ import { SecondComponent } from '../second/second.component'
              <p>Param 2: {{param2}}</p>
              <button (click)="goToHello()">Go to Hello</button>
              <a [routerLink]="['./second']">Second</a>
+             <a [routerLink]="['/hello']">Hello</a>
              <router-outlet></router-outlet>`,
   directives: [ROUTER_DIRECTIVES]
 })
