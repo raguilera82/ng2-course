@@ -1,10 +1,10 @@
 import {Component} from '@angular/core'
-import {HelloWorldComponent} from './helloworld/hello-world.component'
+import {DataExampleComponent} from './example/data-example.component'
 
 @Component({
   selector: 'ng2-app',
-  template: `<ng2-hello-world></ng2-hello-world>`,
-  directives: [HelloWorldComponent]
+  template: `<data-example></data-example>`,
+  directives: [DataExampleComponent]
 })
 
 export class AppComponent{
