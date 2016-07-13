@@ -1,10 +1,16 @@
-import {Component} from '@angular/core'
+import {Component, OnInit} from '@angular/core'
 
 @Component({
   selector: 'data-example',
-  template: `Data Example Component`
+  template: `<p>{{name}}</p>`
 })
 
-export class DataExampleComponent {
-  
+export class DataExampleComponent implements OnInit {
+
+  name: string
+
+  ngOnInit(){
+    this.name = 'Mateo'
+  }
+
 }
