@@ -4,7 +4,10 @@ import {Component, OnInit} from '@angular/core'
   selector: 'data-example',
   template: `<p>{{name}}</p>
              <p [innerHTML]="name"></p>
-             <button (click)="onClick()">Click</button>  `
+             <button (click)="onClick()">Click</button>`,
+  host: {
+    '(click)':'onClickHost()'
+  }
 })
 
 export class DataExampleComponent implements OnInit {
@@ -17,6 +20,10 @@ export class DataExampleComponent implements OnInit {
 
   onClick(){
     console.log('Clicked button')
+  }
+
+  onClickHost(){
+    console.log('Clicked button on host')
   }
 
 }
