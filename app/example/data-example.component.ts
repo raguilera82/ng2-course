@@ -4,7 +4,9 @@ import {Component, OnInit} from '@angular/core'
   selector: 'data-example',
   template: `<p>{{name}}</p>
              <p [innerHTML]="name"></p>
-             <button (click)="onClick()">Click</button>`,
+             <button (click)="onClick()">Click</button>
+             <input type="text" [(ngModel)]="twoway"/>
+             <p>{{twoway}}</p>`,
   host: {
     '(click)':'onClickHost()'
   }
@@ -13,6 +15,7 @@ import {Component, OnInit} from '@angular/core'
 export class DataExampleComponent implements OnInit {
 
   name: string
+  twoway: string
 
   ngOnInit(){
     this.name = 'Mateo'
