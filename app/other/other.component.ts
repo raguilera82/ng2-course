@@ -1,13 +1,22 @@
 import { Component, OnInit } from '@angular/core'
-import { RouteSegment, Router } from '@angular/router'
+import { RouteSegment, Router, Routes, ROUTER_DIRECTIVES } from '@angular/router'
+
+import { SecondComponent } from '../second/second.component'
 
 @Component({
   selector: 'other',
   template: `<p>Parameters:</p>
              <p>Param 1: {{param1}}</p>
              <p>Param 2: {{param2}}</p>
-             <button (click)="goToHello()">Go to Hello</button>`
+             <button (click)="goToHello()">Go to Hello</button>
+             <a [routerLink]="['./second']">Second</a>
+             <router-outlet></router-outlet>`,
+  directives: [ROUTER_DIRECTIVES]
 })
+
+@Routes([
+  {path: '/second', component: SecondComponent}
+])
 
 export class OtherComponent implements OnInit{
 

@@ -33,6 +33,7 @@
         "./app/helloworld/hello-world.service.ts",
         "./app/main.ts",
         "./app/other/other.component.ts",
+        "./app/second/second.component.ts",
         "./test/helloworld/hello-world.component.spec.ts",
         "./test/helloworld/hello-world.service.spec.ts",
         "./test/init.ts"
