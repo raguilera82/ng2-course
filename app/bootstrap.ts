@@ -5,6 +5,11 @@ import 'rxjs'
 import 'zone.js/dist/zone'
 import 'zone.js/dist/long-stack-trace-zone'
 import { bootstrap } from '@angular/platform-browser-dynamic'
-import {AppComponent} from './main'
+import { provide } from '@angular/core'
 
-bootstrap(AppComponent)
+import {AppComponent} from './main'
+import { CONFIG_TOKEN, config } from './config/configuration'
+
+bootstrap(AppComponent, [
+  provide(CONFIG_TOKEN, {useValue: config})
+])
