@@ -8,7 +8,7 @@ import {OtherComponent} from './other/other.component'
   selector: 'ng2-app',
   template: `<nav>
                 <a [routerLink]="['/hello']">Hello</a>
-                <a [routerLink]="['/other']">Other</a>
+                <a [routerLink]="['/other/autentia/university']">Other</a>
              </nav>
              <router-outlet></router-outlet>`,
   directives: [ROUTER_DIRECTIVES]
@@ -16,7 +16,7 @@ import {OtherComponent} from './other/other.component'
 
 @Routes([
   {path: '/hello', component: HelloWorldComponent},
-  {path: '/other', component: OtherComponent}
+  {path: '/other/:param1/:param2', component: OtherComponent}
 ])
 
 export class AppComponent{
