@@ -30,6 +30,7 @@
     "files": [
         "./app/bootstrap.ts",
         "./app/config/configuration.ts",
+        "./app/example/child.component.ts",
         "./app/example/example.service.ts",
         "./app/helloworld/hello-world.component.ts",
         "./app/helloworld/hello-world.service.ts",
