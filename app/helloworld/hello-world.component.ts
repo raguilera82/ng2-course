@@ -3,6 +3,7 @@ import { FormBuilder, ControlGroup, AbstractControl, Control, FORM_DIRECTIVES,
 Validators } from '@angular/common'
 
 import { HelloWorldService } from './hello-world.service'
+import { CommonValidator } from '../validators/common.validator'
 
 @Component({
   selector: 'ng2-hello-world',
@@ -13,6 +14,7 @@ import { HelloWorldService } from './hello-world.service'
                 <input type="text" ngControl="username"/>
                 <div *ngIf="!username.valid && username.dirty">
                   <p *ngIf="username.errors.required">Username required</p>
+                  <p *ngIf="username.errors.startWithNumber">Username can not start with number</p>
                 </div>
                 <p>Password:</p>
                 <input type="password" ngControl="password"/>
@@ -38,7 +40,7 @@ export class HelloWorldComponent implements OnInit{
   ngOnInit(){
     this.hello = this.helloWorldService.getHello()
     this.form = new ControlGroup({
-      username: new Control('', Validators.compose([Validators.required])),
+      username: new Control('', Validators.compose([Validators.required, CommonValidator.startWithNumber])),
       password: new Control('', Validators.compose([Validators.required]))
     })
     this.username = this.form.controls['username']

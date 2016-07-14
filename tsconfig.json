@@ -32,6 +32,7 @@
         "./app/helloworld/hello-world.component.ts",
         "./app/helloworld/hello-world.service.ts",
         "./app/main.ts",
+        "./app/validators/common.validator.ts",
         "./test/helloworld/hello-world.component.spec.ts",
         "./test/helloworld/hello-world.service.spec.ts",
         "./test/init.ts"
