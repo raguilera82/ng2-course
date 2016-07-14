@@ -10,7 +10,13 @@ export class ChuckService {
               @Inject(CONFIG_TOKEN) private config:Configuration){}
 
   getQuote(): Observable<string>{
-    return this.http.get(this.config.api + '/api/protected/random-quote')
+    let token: string = localStorage.getItem('token')
+    let headers: Headers = new Headers()
+    headers.append('Authorization', 'Bearer ' + token)
+    let opts: RequestOptionsArgs = {
+      headers: headers
+    }
+    return this.http.get(this.config.api + '/api/protected/random-quote', opts)
     .map(response => response.text())
   }
 
