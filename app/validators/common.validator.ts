@@ -11,4 +11,16 @@ export class CommonValidator {
     }
   }
 
+  static userTaken(control:Control): Promise<any>{
+    return new Promise((resolve) => {
+      setTimeout(()=>{
+        if ('raguilera' === control.value){
+          resolve({'userTaken': true})
+        }else{
+          resolve(null)
+        }
+      }, 2000)
+    })
+  }
+
 }

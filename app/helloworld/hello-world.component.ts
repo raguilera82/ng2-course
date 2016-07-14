@@ -12,7 +12,8 @@ import { CommonValidator } from '../validators/common.validator'
              <form [ngFormModel]="form">
                 <p>Username:</p>
                 <input type="text" ngControl="username"/>
-                <div *ngIf="!username.valid && username.dirty">
+                <div *ngIf="username.errors && !username.valid && username.dirty">
+                <p *ngIf="username.errors.userTaken">User taken</p>
                   <p *ngIf="username.errors.required">Username required</p>
                   <p *ngIf="username.errors.startWithNumber">Username can not start with number</p>
                 </div>
@@ -40,7 +41,8 @@ export class HelloWorldComponent implements OnInit{
   ngOnInit(){
     this.hello = this.helloWorldService.getHello()
     this.form = new ControlGroup({
-      username: new Control('', Validators.compose([Validators.required, CommonValidator.startWithNumber])),
+      username: new Control('', Validators.compose([Validators.required, CommonValidator.startWithNumber]),
+      Validators.composeAsync([CommonValidator.userTaken])),
       password: new Control('', Validators.compose([Validators.required]))
     })
     this.username = this.form.controls['username']
