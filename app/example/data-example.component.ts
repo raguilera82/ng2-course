@@ -6,7 +6,7 @@ import {DataChildComponent} from './data-child.component'
   selector: 'data-example',
   template: `<p>{{name}}</p>
              <p [innerHTML]="name"></p>
-             <button (click)="onClick()">Click</button>
+             <button (click)="onClick(name)">Click</button>
              <input type="text" [(ngModel)]="twoway"/>
              <p>{{twoway}}</p>
              <data-child [name]="twoway" (created)="onCreated($event)"></data-child>
@@ -27,8 +27,8 @@ export class DataExampleComponent implements OnInit {
     this.name = 'Mateo'
   }
 
-  onClick(){
-    console.log('Clicked button')
+  onClick(name){
+    console.log('Clicked button ' + name)
   }
 
   onClickHost(){
