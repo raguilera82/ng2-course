@@ -11,8 +11,14 @@ import { HelloWorldService } from './hello-world.service'
              <form [ngFormModel]="form">
                 <p>Username:</p>
                 <input type="text" ngControl="username"/>
+                <div *ngIf="!username.valid && username.dirty">
+                  <p *ngIf="username.errors.required">Username required</p>
+                </div>
                 <p>Password:</p>
                 <input type="password" ngControl="password"/>
+                <div *ngIf="!password.valid && password.dirty">
+                  <p *ngIf="password.errors.required">Password required</p>
+                </div>
                 <input type="submit" value="Send" [disabled]="!form.valid"/>
              </form>`,
     directives: [FORM_DIRECTIVES]
