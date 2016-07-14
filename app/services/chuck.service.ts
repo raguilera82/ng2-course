@@ -1,5 +1,5 @@
 import { Inject, Injectable } from '@angular/core'
-import { Http } from '@angular/http'
+import { Http, RequestOptionsArgs, Headers } from '@angular/http'
 import { CONFIG_TOKEN, Configuration } from '../config/configuration'
 import { Observable } from 'rxjs/Observable'
 
@@ -10,8 +10,19 @@ export class ChuckService {
               @Inject(CONFIG_TOKEN) private config:Configuration){}
 
   getQuote(): Observable<string>{
-    return this.http.get(this.config.api + '/api/random-quote')
+    return this.http.get(this.config.api + '/api/protected/random-quote')
     .map(response => response.text())
+  }
+
+  auth(): Observable<string>{
+    let creds: string = 'username=ng2-course&password=ng2-course'
+    let headers: Headers = new Headers()
+    headers.append('Content-Type', 'application/x-www-form-urlencoded')
+    let opts: RequestOptionsArgs = {
+      headers: headers
+    }
+    return this.http.post(this.config.api + '/users', creds, opts)
+    .map(response => response.json().id_token)
   }
 
 }

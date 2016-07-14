@@ -8,6 +8,7 @@ import { ChuckService } from '../services/chuck.service'
   providers: [HelloWorldService, ChuckService],
   template: `<p id="hello">{{hello}}</p>
              <button (click)="getQuote()">Get Quote</button>
+             <button (click)="auth()">Auth</button>
              <p>{{quote}}</p>`
 
 })
@@ -29,6 +30,19 @@ export class HelloWorldComponent implements OnInit{
     .subscribe(
       (data) => {
         this.quote = data
+      },
+      (err) => {
+        console.log(err)
+      }
+    )
+  }
+
+  auth(){
+    this.chuckService.auth()
+    .subscribe(
+      (data) => {
+        localStorage.setItem('token', data)
+        console.log('Token: ' + data)
       },
       (err) => {
         console.log(err)
