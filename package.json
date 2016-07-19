@@ -41,7 +41,7 @@
     "test": "./node_modules/karma/bin/karma start",
     "e2e": "./node_modules/.bin/webdriver-manager start",
     "live": "./node_modules/live-server/live-server.js",
-    "pro": "./node_modules/gulp/bin/gulp.js clean-dist && ./node_modules/jspm/jspm.js bundle-sfx app dist/bundle.js",
+    "pro": "./node_modules/gulp/bin/gulp.js clean-dist && ./node_modules/jspm/jspm.js bundle-sfx --skip-source-maps --minify app dist/bundle.js",
     "clean": "./node_modules/gulp/bin/gulp.js clean",
     "compile": "./node_modules/gulp/bin/gulp.js compile",
     "compile-w": "./node_modules/gulp/bin/gulp.js compile-w",
