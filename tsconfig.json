@@ -38,7 +38,7 @@
         "./app/helloworld/hello-world.service.ts",
         "./app/main.ts",
         "./test/calculator/calculator.service.jasmine.spec.ts",
-        "./test/calculator/calculator.service.specignore.ts",
+        "./test/calculator/calculator.service.spec.ts",
         "./test/helloworld/hello-world.component.spec.ts",
         "./test/helloworld/hello-world.service.spec.ts",
         "./test/init.ts"
