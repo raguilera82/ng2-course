@@ -1,5 +1,5 @@
 import {describe, it, beforeEachProviders, inject, expect} from '@angular/core/testing'
-import {HelloWorldService} from '../../app/helloworld/hello-world.service'
+import {HelloWorldService} from '../../../app/helloworld/hello-world.service'
 
 describe('Hello World', () => {
 

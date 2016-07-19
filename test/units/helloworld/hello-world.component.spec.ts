@@ -1,5 +1,5 @@
-import {HelloWorldComponent} from '../../app/helloworld/hello-world.component'
-import { HelloWorldService } from '../../app/helloworld/hello-world.service'
+import {HelloWorldComponent} from '../../../app/helloworld/hello-world.component'
+import { HelloWorldService } from '../../../app/helloworld/hello-world.service'
 
 import {
   beforeEachProviders,

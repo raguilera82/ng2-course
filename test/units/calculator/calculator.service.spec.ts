@@ -1,8 +1,8 @@
 import {describe, it, beforeEachProviders, inject, expect} from '@angular/core/testing'
 
-import {CalculatorService} from '../../app/calculator/calculator.service'
-import {SumService} from '../../app/calculator/sum.service'
-import {MinusService} from '../../app/calculator/minus.service'
+import {CalculatorService} from '../../../app/calculator/calculator.service'
+import {SumService} from '../../../app/calculator/sum.service'
+import {MinusService} from '../../../app/calculator/minus.service'
 
 describe('Calculator service', ()=>{
 

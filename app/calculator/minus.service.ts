@@ -3,7 +3,7 @@ export class MinusService{
   execute(op1:number, op2:number): number {
     console.log('Execute minus')
     this.pause(1000)
-    return op1 - op2
+    return +op1 - +op2
 
   }
 

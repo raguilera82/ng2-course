@@ -1,6 +1,6 @@
-import {CalculatorService} from '../../app/calculator/calculator.service.jasmine'
-import {SumService} from '../../app/calculator/sum.service'
-import {MinusService} from '../../app/calculator/minus.service'
+import {CalculatorService} from '../../../app/calculator/calculator.service.jasmine'
+import {SumService} from '../../../app/calculator/sum.service'
+import {MinusService} from '../../../app/calculator/minus.service'
 
 describe('Calculator service', ()=>{
 

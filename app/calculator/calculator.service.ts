@@ -1,6 +1,9 @@
+import {Injectable} from '@angular/core'
+
 import {SumService} from './sum.service'
 import {MinusService} from './minus.service'
 
+@Injectable()
 export class CalculatorService {
 
   constructor(private sumService:SumService, private minusService:MinusService){
