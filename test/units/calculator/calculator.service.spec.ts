@@ -19,6 +19,16 @@ describe('Calculator service', ()=>{
 
   })))
 
+  it('sum two numbers async', (inject([SumService], (sumService:SumService) => {
+    let a:number = 4
+    let b:number = 6
+    let resultPromise:Promise<number> = sumService.executeAsync(a, b)
+    return resultPromise.then((result)=>{
+      expect(result).toBe(10)
+    })
+
+  })))
+
   it('minus two numbers', (inject([MinusService], (minusService:MinusService) => {
 
     let a:number = 4
