@@ -4,5 +4,13 @@ export class SumService{
     return +op1 + +op2;
   }
 
+  executeAsync(op1:number, op2:number): Promise<number>{
+    return new Promise((resolve) => {
+      setTimeout(()=>{
+        resolve(+op1 + +op2)
+      }, 1000)
+    })
+  }
+
 
 }
