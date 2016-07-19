@@ -5,11 +5,14 @@ import {MinusService} from '../../app/calculator/minus.service'
 describe('Calculator service', ()=>{
 
   let sumService:SumService;
-  let minusService:MinusService;
+  let minusService:any;
 
   beforeEach(()=>{
     sumService = new SumService()
-    minusService = new MinusService()
+    minusService = jasmine.createSpyObj('minusService', ['execute'])
+    minusService.execute.and.callFake((a,b)=>{
+      return a - b
+    })
   })
 
   it('sum two numbers', () => {
@@ -21,11 +24,18 @@ describe('Calculator service', ()=>{
   })
 
   it('minus two numbers', () => {
-
     let a:number = 4
     let b:number = 6
     let result:number = minusService.execute(a, b)
     expect(result).toBe(-2)
+
+  })
+
+  it('minus two numbers', () => {
+    let a:number = 4
+    let b:number = 4
+    let result:number = minusService.execute(a, b)
+    expect(result).toBe(0)
 
   })
 
