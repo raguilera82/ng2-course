@@ -29,9 +29,16 @@
     "buildOnSave": false,
     "files": [
         "./app/bootstrap.ts",
+        "./app/calculator/calculator.component.ts",
+        "./app/calculator/calculator.service.jasmine.ts",
+        "./app/calculator/calculator.service.ts",
+        "./app/calculator/minus.service.ts",
+        "./app/calculator/sum.service.ts",
         "./app/helloworld/hello-world.component.ts",
         "./app/helloworld/hello-world.service.ts",
         "./app/main.ts",
+        "./test/calculator/calculator.service.jasmine.spec.ts",
+        "./test/calculator/calculator.service.spec.ts",
         "./test/helloworld/hello-world.component.spec.ts",
         "./test/helloworld/hello-world.service.spec.ts",
         "./test/init.ts"
