@@ -38,6 +38,7 @@
         "./app/helloworld/hello-world.service.ts",
         "./app/main.ts",
         "./test/e2e/calculator/calculator.spec.ts",
+        "./test/units/calculator/calculator.component.spec.ts",
         "./test/units/calculator/calculator.service.jasmine.spec.ts",
         "./test/units/calculator/calculator.service.spec.ts",
         "./test/units/helloworld/hello-world.component.spec.ts",
