@@ -17,8 +17,7 @@ module.exports = function(config) {
       config: 'config.js',
       loadFiles: [
         'build/test/units/init.js',
-        //'build/test/units/**/*spec.js',
-        'build/test/units/**/*.component.spec.js'
+        'build/test/units/**/*spec.js'
       ],
       serveFiles: [
         'build/app/**/*.js'
