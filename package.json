@@ -8,7 +8,7 @@
     "@angular/common": "2.0.0-rc.1",
     "@angular/compiler": "2.0.0-rc.1",
     "@angular/core": "2.0.0-rc.1",
-    "@angular/http": "^2.0.0-rc.1",
+    "@angular/http": "2.0.0-rc.1",
     "@angular/platform-browser": "2.0.0-rc.1",
     "@angular/platform-browser-dynamic": "2.0.0-rc.1",
     "@angular/router": "2.0.0-rc.1",
@@ -30,7 +30,7 @@
     "karma-jspm": "2.1.0",
     "karma-sourcemap-loader": "0.3.7",
     "live-server": "1.0.0",
-    "protractor": "^4.0.0",
+    "protractor": "4.0.0",
     "reflect-metadata": "0.1.3",
     "rxjs": "5.0.0-beta.6",
     "tslint": "3.9.0",
@@ -38,7 +38,8 @@
     "zone.js": "0.6.12"
   },
   "scripts": {
-    "test": "./node_modules/karma/bin/karma start",
+    "test": "npm run compile && ./node_modules/karma/bin/karma start",
+    "test-int": "npm run compile && ./node_modules/karma/bin/karma start karma.conf.int.js",
     "e2e": "./node_modules/.bin/webdriver-manager start",
     "live": "./node_modules/live-server/live-server.js",
     "pro": "./node_modules/gulp/bin/gulp.js clean-dist && ./node_modules/jspm/jspm.js bundle-sfx --skip-source-maps --minify app dist/bundle.js",

@@ -7,14 +7,14 @@ import {MinusService} from '../../../app/calculator/minus.service'
 describe('Calculator service', ()=>{
 
   beforeEachProviders(() => [
-    SumService, MinusService
+    CalculatorService, SumService, MinusService
   ])
 
 
-  it('sum two numbers', (inject([SumService], (sumService:SumService) => {
+  it('sum two numbers', (inject([CalculatorService], (calculatorService:CalculatorService) => {
     let a:number = 4
     let b:number = 6
-    let result:number = sumService.execute(a, b)
+    let result:number = calculatorService.sum(a, b)
     expect(result).toBe(10)
 
   })))
@@ -29,24 +29,24 @@ describe('Calculator service', ()=>{
 
   })))
 
-  it('minus two numbers', (inject([MinusService], (minusService:MinusService) => {
+  it('minus two numbers', (inject([CalculatorService], (calculatorService:CalculatorService) => {
 
     let a:number = 4
     let b:number = 6
-    let result:number = minusService.execute(a, b)
+    let result:number = calculatorService.minus(a, b)
     expect(result).toBe(-2)
 
 
   })))
 
-  it('operations two numbers', (inject([SumService, MinusService], (sumService:SumService, minusService:MinusService) => {
+  it('operations two numbers', (inject([CalculatorService], (calculatorService:CalculatorService) => {
 
     let a:number = 4
     let b:number = 6
-    let resultMinus:number = minusService.execute(a, b)
+    let resultMinus:number = calculatorService.minus(a, b)
     expect(resultMinus).toBe(-2)
 
-    let resultSum:number = sumService.execute(a, b)
+    let resultSum:number = calculatorService.sum(a, b)
     expect(resultSum).toBe(10)
 
 
