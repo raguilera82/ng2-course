@@ -6,9 +6,10 @@ import {SearchUserAdapter} from './search-user.adapter'
 @Component({
   selector: 'au-search-user',
   template: `<input type="text" #username>
-             <button (click)="searchUser(username.value)">Search</button>
+             <button id="searchUser" (click)="searchUser(username.value)">Search</button>
              <div *ngIf="user">
-              <p>{{user.name}}</p>
+              <p id="login">{{user.login}}</p>
+              <p id="name">{{user.name}}</p>
               <img src="{{user.imageUrl}}"/>
              </div>`,
   providers: [SearchUserService, SearchUserAdapter]
