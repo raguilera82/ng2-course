@@ -29,9 +29,13 @@
     "buildOnSave": false,
     "files": [
         "./app/bootstrap.ts",
-        "./app/helloworld/hello-world.component.ts",
-        "./app/helloworld/hello-world.service.ts",
         "./app/main.ts",
+        "./app/search-user/search-user-bad.component.ts",
+        "./app/search-user/search-user.adapter.ts",
+        "./app/search-user/search-user.component.ts",
+        "./app/search-user/search-user.service.ts",
+        "./app/shared/model/user.ts",
+        "./app/shared/proxies/github-user.proxy.ts",
         "./test/helloworld/hello-world.component.spec.ts",
         "./test/helloworld/hello-world.service.spec.ts",
         "./test/init.ts"

@@ -1,10 +1,11 @@
 import {Component} from '@angular/core'
-import {HelloWorldComponent} from './helloworld/hello-world.component'
+import {SearchUserComponent} from './search-user/search-user.component'
+import {SearchUserComponentBad} from './search-user/search-user-bad.component'
 
 @Component({
   selector: 'ng2-app',
-  template: `<ng2-hello-world></ng2-hello-world>`,
-  directives: [HelloWorldComponent]
+  template: `<au-search-user-bad></au-search-user-bad>`,
+  directives: [SearchUserComponentBad]
 })
 
 export class AppComponent{
