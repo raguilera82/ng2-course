@@ -24,4 +24,14 @@ describe('Search user service', () => {
     )
   })))
 
+  it ('should search user by username-Error', async(inject([SearchUserService], (searchUserService:SearchUserService) => {
+    const USERNAME = 'raguilera82'
+    searchUserService.searchUser(USERNAME).subscribe(
+      data => {
+        expect(data).toBeDefined()
+        expect(data.login).toBe(USERNAME)
+      }
+    )
+  })))
+
 })

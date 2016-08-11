@@ -4,7 +4,7 @@ import {User} from '../../app/shared/model/user'
 export class SearchUserServiceMock {
 
   searchUser(username:string): Observable<User> {
-    return Observable.of(new User('raguilera82', 'http://image', 'Ruben Aguilera Diaz-Heredero'))
+      return Observable.of(new User('raguilera82', 'Ruben Aguilera Diaz-Heredero', 'http://image'))
   }
 
 }
