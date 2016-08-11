@@ -36,9 +36,8 @@
         "./app/search-user/search-user.service.ts",
         "./app/shared/model/user.ts",
         "./app/shared/proxies/github-user.proxy.ts",
-        "./test/helloworld/hello-world.component.spec.ts",
-        "./test/helloworld/hello-world.service.spec.ts",
-        "./test/init.ts"
+        "./test/init.ts",
+        "./test/search-user/search-user.adapter.spec.ts"
     ],
     "atom": {
         "rewriteTsconfig": true

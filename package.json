@@ -26,6 +26,7 @@
     "karma": "0.13.22",
     "karma-chrome-launcher": "1.0.1",
     "karma-coverage": "github:douglasduteil/karma-coverage#next",
+    "karma-coverage-allsources": "0.0.4",
     "karma-jasmine": "1.0.2",
     "karma-jspm": "2.1.0",
     "karma-sourcemap-loader": "0.3.7",
@@ -37,7 +38,7 @@
     "zone.js": "0.6.12"
   },
   "scripts": {
-    "test": "./node_modules/karma/bin/karma start",
+    "test": "npm run compile && ./node_modules/karma/bin/karma start",
     "live": "./node_modules/live-server/live-server.js",
     "pro": "./node_modules/gulp/bin/gulp.js clean-dist && ./node_modules/jspm/jspm.js bundle-sfx app dist/bundle.js",
     "clean": "./node_modules/gulp/bin/gulp.js clean",
