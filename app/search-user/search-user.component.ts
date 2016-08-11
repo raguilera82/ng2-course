@@ -21,10 +21,11 @@ export class SearchUserComponent {
   constructor(private searchUserService:SearchUserService){}
 
   searchUser(username:string){
-    console.log(username)
     this.searchUserService
     .searchUser(username).subscribe(
-      value => this.user = value,
+      value => {
+        this.user = value
+      },
       error => console.log(error)
     )
   }

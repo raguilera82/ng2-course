@@ -12,7 +12,9 @@ export class SearchUserService {
 
   searchUser(username:string): Observable<User> {
     return this.githubUser.searchByUsername(username).map(
-      data => this.searchUserAdapter.adapterToUser(data.json())
+      data => {
+        return this.searchUserAdapter.adapterToUser(data.json())
+      }
     )
   }
 

@@ -1,5 +1,8 @@
 export class User {
 
-  constructor(public name:string, public imageUrl:string){}
+  constructor(
+    public login:string,
+    public name:string,
+    public imageUrl:string){}
 
 }

@@ -35,9 +35,12 @@
         "./app/search-user/search-user.component.ts",
         "./app/search-user/search-user.service.ts",
         "./app/shared/model/user.ts",
+        "./app/shared/proxies/github-user.proxy.mock.ts",
         "./app/shared/proxies/github-user.proxy.ts",
         "./test/init.ts",
-        "./test/search-user/search-user.adapter.spec.ts"
+        "./test/search-user/search-user.adapter.spec.ts",
+        "./test/search-user/search-user.service.spec.ts",
+        "./test/shared/proxies/github-user.proxy.mock.ts"
     ],
     "atom": {
         "rewriteTsconfig": true

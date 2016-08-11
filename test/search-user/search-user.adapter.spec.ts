@@ -9,12 +9,12 @@ describe('Search user adapter', () => {
   ])
 
   it ('should get user from json', inject([SearchUserAdapter], (searchUserAdapter:SearchUserAdapter) => {
-      const NAME = 'raguilera82'
+      const LOGIN = 'raguilera82'
       const IMAGE_URL = 'http://image'
-      let jsonData = {name: NAME, imageUrl: IMAGE_URL}
+      let jsonData = {login: LOGIN, imageUrl: IMAGE_URL}
       let user:User = searchUserAdapter.adapterToUser(jsonData)
       expect(user).toBeDefined()
-      expect(user.name).toBe('raguilera82')
+      expect(user.login).toBe(LOGIN)
   }))
 
 })
