@@ -37,9 +37,7 @@ module.exports = function(config) {
       exclude: 'build/app/*.js',
       reporters: [
         {
-          type: 'json',
-          dir: 'coverage/',
-          file: 'coverage.json'
+          type: 'in-memory'
         }
       ]
     },
@@ -51,7 +49,6 @@ module.exports = function(config) {
     reporters: ['progress', 'coverage-allsources','coverage', 'karma-remap-istanbul'],
 
     remapIstanbulReporter: {
-      src: 'coverage/Chrome 50.0.2661 (Linux 0.0.0)/coverage-final.json',
       reports: {
         'html': 'coverage',
         'text-summary': ''
