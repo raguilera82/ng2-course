@@ -5,8 +5,6 @@ import {provide} from '@angular/core'
 import {SearchUserService} from '../../app/search-user/search-user.service'
 import {SearchUserServiceMock} from './search-user.service.mock'
 import {SearchUserComponent} from '../../app/search-user/search-user.component'
-import {GithubUserProxy} from '../../app/shared/proxies/github-user.proxy'
-import {GithubUserProxyMock} from '../shared/proxies/github-user.proxy.mock'
 
 describe('Search user component', () => {
 

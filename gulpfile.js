@@ -7,7 +7,7 @@ const tslint = require('gulp-tslint')
 const filter = require('gulp-filter')
 
 gulp.task('clean', function(){
-  return del('build')
+  return del(['build','coverage'])
 })
 
 gulp.task('clean-dist', function(){

@@ -26,8 +26,7 @@ export class SearchUserComponent {
     .searchUser(username).subscribe(
       value => {
         this.user = value
-      },
-      error => console.log(error)
+      }
     )
   }
 

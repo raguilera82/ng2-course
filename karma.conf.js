@@ -29,6 +29,7 @@ module.exports = function(config) {
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
       'build/app/**/*.js': ['coverage','sourcemap']
+
     },
 
     coverageReporter: {
@@ -36,11 +37,9 @@ module.exports = function(config) {
       exclude: 'build/app/*.js',
       reporters: [
         {
-          type: 'text-summary'
-        },
-        {
-          type: 'html',
-          dir: 'coverage/'
+          type: 'json',
+          dir: 'coverage/',
+          file: 'coverage.json'
         }
       ]
     },
@@ -49,7 +48,15 @@ module.exports = function(config) {
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters: ['progress', 'coverage-allsources', 'coverage'],
+    reporters: ['progress', 'coverage-allsources','coverage', 'karma-remap-istanbul'],
+
+    remapIstanbulReporter: {
+      src: 'coverage/Chrome 50.0.2661 (Linux 0.0.0)/coverage-final.json',
+      reports: {
+        'html': 'coverage',
+        'text-summary': ''
+      }
+    },
 
 
     // web server port
